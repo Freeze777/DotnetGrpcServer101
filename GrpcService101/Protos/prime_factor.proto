@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService101";
+
+package greet;
+
+message PrimeFactorRequest{
+  int32 number = 1;
+}
+
+message PrimeFactorResponse{
+  int32 prime = 1;
+}
+
+service PrimeFactor {
+  rpc Factorize (PrimeFactorRequest) returns (stream PrimeFactorResponse);
+}
+

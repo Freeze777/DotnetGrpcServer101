@@ -1,0 +1,59 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+*.orig
+
+# Visual Studio Code
+# .vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.exe
+*.dll
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+/packages/
+/.localhistory
+
+# Code coverage results
+coverage.opencover.xml
+
+# ci build
+ci/tmp/
+
+# generated
+Generated/
+*.generated.*
+
+# nuget packages
+packages/
+
+.env
+global.json

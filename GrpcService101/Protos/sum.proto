@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService101";
+
+package greet;
+
+message SumRequest{
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message SumResult{
+  int32 result = 1;
+}
+
+service Calculator {
+  rpc Sum (SumRequest) returns (SumResult);
+}
+
