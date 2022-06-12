@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GrpcService101.Services;
+﻿using GrpcService101.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +31,7 @@ namespace GrpcService101
                 endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<CalculatorService>();
                 endpoints.MapGrpcService<PrimeFactorService>();
+                endpoints.MapGrpcService<AverageService>();
 
                 endpoints.MapGet("/",
                     async context =>
