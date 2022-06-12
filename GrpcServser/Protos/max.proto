@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "GrpcService101";
+
+package greet;
+
+message MaxRequest{
+  int32 number = 1;
+}
+
+message MaxResponse{
+  int32 max = 1;
+}
+
+service Max{
+  rpc ComputeMax (stream MaxRequest) returns (stream MaxResponse);
+}

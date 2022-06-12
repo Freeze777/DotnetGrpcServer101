@@ -14,6 +14,7 @@ namespace GrpcService101
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+            services.AddGrpcReflection();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +33,8 @@ namespace GrpcService101
                 endpoints.MapGrpcService<CalculatorService>();
                 endpoints.MapGrpcService<PrimeFactorService>();
                 endpoints.MapGrpcService<AverageService>();
+                endpoints.MapGrpcService<MaxService>();
+                endpoints.MapGrpcReflectionService();
 
                 endpoints.MapGet("/",
                     async context =>
