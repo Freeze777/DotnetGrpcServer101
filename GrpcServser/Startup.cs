@@ -34,6 +34,7 @@ namespace GrpcService101
                 endpoints.MapGrpcService<PrimeFactorService>();
                 endpoints.MapGrpcService<AverageService>();
                 endpoints.MapGrpcService<MaxService>();
+                endpoints.MapGrpcService<BlogService>();
                 endpoints.MapGrpcReflectionService();
 
                 endpoints.MapGet("/",
