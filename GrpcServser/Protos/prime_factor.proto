@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "GrpcService101";
 
-package greet;
+package prime_factor;
 
 message PrimeFactorRequest{
   int32 number = 1;

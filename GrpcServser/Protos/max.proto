@@ -1,7 +1,7 @@
 syntax = "proto3";
 option csharp_namespace = "GrpcService101";
 
-package greet;
+package max;
 
 message MaxRequest{
   int32 number = 1;

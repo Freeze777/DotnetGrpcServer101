@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option csharp_namespace = "GrpcService101";
 
-package greet;
+package sum;
 
 message SumRequest{
   int32 x = 1;

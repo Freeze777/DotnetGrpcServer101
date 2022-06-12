@@ -1,4 +1,6 @@
 syntax = "proto3";
+import "google/protobuf/empty.proto";
+
 option csharp_namespace = "GrpcService101";
 
 package greet;
@@ -10,6 +12,22 @@ message Blog{
   string title = 4;
 }
 
+message CreateBlogRequest{
+  string author = 1;
+  string content = 2;
+  string title = 3;
+}
+
+message GetBlogRequest{
+  string id = 1;
+}
+
+message ListBlogResponse{
+  repeated Blog blogs = 1;
+}
+
 service BlogApp{
-  rpc Create(Blog) returns (Blog);
+  rpc Create(CreateBlogRequest) returns (Blog);
+  rpc GetBlog(GetBlogRequest) returns (Blog);
+  rpc ListBlog(google.protobuf.Empty) returns (ListBlogResponse);
 }
